@@ -1,0 +1,71 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-blue);
+}
+
+:root {
+  --primary-blue: #01ffff;
+  --secondary-blue: #00c4ff;
+
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: "Grechen Fuemen", sans-serif;
+  font-style: normal;
+  color: white;
+  text-align: center;
+
+  span {
+    opacity: 0%;
+
+    &.start {
+      animation: textFadeIn 1s ease-in-out;
+      animation-fill-mode: forwards;
+
+      &.blue {
+        animation: textFadeIn 1s ease-in-out, textBlue 2s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 3em;
+  font-family: "Darumadrop One", sans-serif;
+  font-style: normal;
+  color: white;
+  text-align: center;
+
+  span {
+    &.blue {
+      color: var(--secondary-blue);
+    }
+  }
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+
+  animation: textFadeIn 4s ease-in-out;
+  color: white;
+}

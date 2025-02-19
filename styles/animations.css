@@ -1,0 +1,170 @@
+@keyframes playButton {
+  0% {
+    transform: scale(1);
+  }
+  97% {
+    transform: scale(3.8);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes crazyFonts {
+  0% {
+    color: black;
+  }
+  10% {
+    color: white;
+  }
+  20% {
+    font-family: "Darumadrop One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  }
+  30% {
+    font-family: "Arial";
+    text-transform: uppercase;
+  }
+  40% {
+    font-family: "Arial";
+    text-transform: lowercase;
+    color: #111;
+  }
+  50% {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  60% {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-transform: uppercase;
+  }
+  70% {
+    font-family: "Darumadrop One", cursive;
+    font-weight: 700;
+    font-style: italic;
+    color: black;
+    text-transform: capitalize;
+  }
+  80% {
+    color: white;
+    text-transform: uppercase;
+  }
+  90% {
+    font-family: "Jacquard 12", serif;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+  100% {
+    font-family: "Arial";
+    text-transform: lowercase;
+    color: black;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes thundershock {
+  0% {
+    background-color: #111;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes tremble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes domainExpansion {
+  0% {
+    transform: scale(0.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes domainSplash {
+  0% {
+    transform: scale(0.01) rotate(0deg);
+  }
+  95% {
+    transform: scale(0.5) rotate(45deg);
+  }
+  100% {
+    transform: scale(0) rotate(0deg);
+  }
+}
+
+@keyframes textBlue {
+  0% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: var(--primary-blue);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}

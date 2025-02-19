@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/carrousel.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Desafio 1 - ASCII</title>
+  </head>
+  <body>
+    <div class="initial-container start">
+      <button class="the-button">Me clique :)</button>
+      <div id="epilepsy-container">
+        <input type="checkbox" id="epilepsy" name="epilepsy" />
+        <label for="epilepsy">Sou epiléptico</label>
+      </div>
+    </div>
+    <div class="muryokusho">
+      <img class="splash" src="./assets/images/splash.png" alt="splash" />
+    </div>
+    <main class="main-container">
+      <video class="background-video" muted autoplay loop>
+        <source src="./assets/videos/background-video.mp4" type="video/mp4" />
+      </video>
+      <h1 class="title">
+        <span id="first-name">Satoru</span>
+        <span class="blue" id="second-name">Gojo</span>
+      </h1>
+      <h3>O mais forte feiticeiro</h3>
+    </main>
+    <div class="about-container content">
+      <h2>Quem é <span class="blue">Satoru Gojo</span></h2>
+      <div class="about-content">
+        <div class="image-container" id="carrousel">
+          <img
+            id="carrousel-item"
+            src="./assets/images/gojo-1.webp"
+            alt="Satoru Gojo"
+            width="300px"
+          />
+          <img
+            id="carrousel-item"
+            src="./assets/images/gojo-2.png"
+            alt="Satoru Gojo"
+            width="400px"
+          />
+          <img
+            id="carrousel-item"
+            src="./assets/images/gojo-3.png"
+            alt="Satoru Gojo"
+            width="450px"
+          />
+        </div>
+        <div class="description-container">
+          <p>
+            <i
+              >"Para o cego, é a luz. Para o faminto, é o pão. Para o sedento...
+              "</i
+            >
+          </p>
+          <p>
+            <b>Satoru Gojo</b> é simplesmente o feiticeiro mais poderoso do
+            mundo de <b>Jujutsu Kaisen</b>. Ele é professor na Escola de Jujutsu
+            de Tóquio e responsável por treinar os alunos para se tornarem
+            feiticeiros capazes de enfrentar maldições. Mas não se engane pelo
+            título de professor, porque Gojo é muito mais do que isso. Ele é
+            arrogante, brincalhão e vive tirando sarro dos outros,
+            principalmente de seus colegas de trabalho, mas por trás dessa
+            personalidade descontraída, existe alguém que realmente se importa
+            com seus alunos e com o futuro do mundo jujutsu.
+          </p>
+          <p>
+            O que faz dele tão especial é o fato de que ele herdou duas
+            habilidades absurdamente raras: o <b>Seis Olhos (Rikugan)</b> e o
+            <b>Ilimitado (Mugen)</b>. O Seis Olhos permite que ele enxergue a
+            energia amaldiçoada de forma extremamente detalhada, enquanto o
+            Ilimitado lhe dá o poder de manipular o espaço ao seu redor. Isso
+            significa que ninguém pode simplesmente tocá-lo, pois qualquer coisa
+            que se aproxime desacelera infinitamente antes de atingi-lo.
+            Basicamente, ele é intocável. E como se não bastasse, ele também
+            pode usar expansões de domínio insanas, como o
+            <b>Vazio Ilimitado</b>, que sobrecarrega a mente do inimigo com
+            informação infinita.
+          </p>
+          <div class="quote">
+            <p>“No Céu e na Terra, só eu sou o honrado”</p>
+            <i>~Gojo, Satoru</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/scroll-fade.js"></script>
+  <script src="./scripts/carrousel.js"></script>
+</html>
