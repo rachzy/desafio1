@@ -160,8 +160,21 @@ body {
 }
 
 /* CONTENT */
+
 .content {
   display: none;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.visible {
+    display: flex;
+  }
+}
+
+.container {
   flex-direction: column;
 
   justify-content: center;
@@ -181,13 +194,44 @@ body {
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 
-  &.show {
-    opacity: 1;
-    transform: translateY(0);
+  &.mugen {
+    cursor: none;
+
+    .mugen-gojo {
+      cursor: none;
+      animation: mugenGojo 3s ease-in-out infinite;
+    }
+
+    #fake-cursor {
+      position: fixed;
+    }
   }
 
-  &.visible {
-    display: flex;
+  &.murasaki {
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+
+    &.visible {
+      display: flex;
+    }
+
+    .description-container {
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+    }
+
+    .murasaki-simulator {
+      position: relative;
+      width: 500px;
+      height: 300px;
+      margin-bottom: 20px;
+    }
   }
 
   .about-content {
@@ -228,19 +272,6 @@ body {
   }
 }
 
-.mugen-container {
-  cursor: none;
-
-  .mugen-gojo {
-    cursor: none;
-    animation: mugenGojo 3s ease-in-out infinite;
-  }
-
-  #fake-cursor {
-    position: fixed;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .content {
     .about-content {
@@ -261,33 +292,6 @@ body {
   }
 }
 
-.murasaki-container {
-  flex-direction: column;
-
-  justify-content: space-between;
-  align-items: center;
-
-  overflow: hidden;
-
-  &.visible {
-    display: flex;
-  }
-
-  .description-container {
-    display: flex;
-    flex-direction: column;
-
-    gap: 20px;
-  }
-
-  .murasaki-simulator {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    margin-bottom: 20px;
-  }
-}
-
 .muryokusho-secondary {
   &.clicked {
     animation: thundershock 0.1s ease infinite, playButton 6.5s ease-in-out;
@@ -298,5 +302,19 @@ body {
     animation: thundershock 0.1s ease infinite, tremble 0.1s ease infinite,
       playButton 6.5s ease-in-out, crazyFonts 0.5s ease infinite;
     animation-fill-mode: forwards;
+  }
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+
+  padding: 48px 12px;
+  background: black;
+
+  margin-top: 48px;
+
+  p {
+    color: white;
   }
 }

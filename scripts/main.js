@@ -129,4 +129,5 @@ muryokushoTriggers.forEach((trigger) => {
   });
 });
 
-displayContent(0);
+// Uncomment it if you want to display the content without the initial stage
+// displayContent(0);
