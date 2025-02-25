@@ -9,11 +9,13 @@ body {
     animation: thundershock 0.1s ease infinite;
     animation-fill-mode: forwards;
   }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
-.hidden {
-  display: none;
-}
+/* STAGE 1 */
 
 .initial-container {
   display: none;
@@ -62,7 +64,7 @@ body {
 }
 
 .muryokusho {
-  position: absolute;
+  position: fixed;
   display: none;
 
   top: 0;
@@ -73,13 +75,10 @@ body {
 
   transform: scale(0.01);
 
-  background-color: #000;
+  background-color: #111;
+  overflow: hidden;
 
   z-index: 10;
-
-  .splash {
-    animation: domainSplash 0.2s ease-in-out;
-  }
 
   &.start {
     display: flex;
@@ -91,11 +90,42 @@ body {
     animation-fill-mode: forwards;
 
     .splash {
-      animation: domainSplash 1.6s ease-in-out;
+      position: absolute;
+      animation: domainSplash 2s ease-in-out;
       animation-fill-mode: forwards;
     }
   }
 }
+
+.muryokusho-video {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  z-index: 10;
+
+  &.visible {
+    display: block;
+  }
+
+  &.start {
+    animation: casualFadeIn 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  &.end {
+    animation: casualFadeOut 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+/* STAGE 2 */
 
 .main-container {
   display: none;
@@ -120,7 +150,7 @@ body {
 
       opacity: 0%;
 
-      transition: 1s all;
+      transition: 1.3s all;
 
       &.start {
         opacity: 15%;
@@ -129,6 +159,7 @@ body {
   }
 }
 
+/* CONTENT */
 .content {
   display: none;
   flex-direction: column;
@@ -141,11 +172,12 @@ body {
 
   gap: 42px;
 
-  padding: 42px 21px;
+  padding-block: 21px;
+  padding-inline: 10vw;
 
   background-color: #111;
 
-  opacity: 0;
+  opacity: 1;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 
@@ -175,7 +207,6 @@ body {
       gap: 20px;
 
       justify-content: center;
-      align-items: center;
 
       flex: 1;
     }
@@ -199,10 +230,71 @@ body {
   }
 }
 
+.mugen-container {
+  cursor: none;
+
+  .mugen-gojo {
+    cursor: none;
+    animation: mugenGojo 3s ease-in-out infinite;
+  }
+
+  #fake-cursor {
+    position: fixed;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .content {
     .about-content {
       flex-direction: column;
     }
+  }
+
+  .mugen-challenge {
+    display: none;
+  }
+
+  .image-container {
+    align-items: center;
+  }
+}
+
+.murasaki-container {
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+
+  &.visible {
+    display: flex;
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .murasaki-simulator {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
+
+.muryokusho-secondary {
+  &.clicked {
+    animation: thundershock 0.1s ease infinite, playButton 6.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  &.tremble {
+    animation: thundershock 0.1s ease infinite, tremble 0.1s ease infinite,
+      playButton 6.5s ease-in-out, crazyFonts 0.5s ease infinite;
+    animation-fill-mode: forwards;
   }
 }

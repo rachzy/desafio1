@@ -5,23 +5,32 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #c2c2c2;
+  border-radius: 15px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-blue);
-  border-radius: 10px;
+  background: var(--tertiary-blue);
+  border-radius: 15px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-blue);
+  background: var(--quaternary-blue);
 }
 
 :root {
   --primary-blue: #01ffff;
   --secondary-blue: #00c4ff;
+  --tertiary-blue: #023161;
+  --quaternary-blue: #001e33;
+
+  --primary-purple: #663399;
+
+  --primary-red: #ff0000cc;
+
+  --gray: #33333;
 
   scroll-behavior: smooth;
 }
@@ -37,11 +46,11 @@ h1 {
     opacity: 0%;
 
     &.start {
-      animation: textFadeIn 1s ease-in-out;
+      animation: casualFadeIn 1s ease-in-out;
       animation-fill-mode: forwards;
 
       &.blue {
-        animation: textFadeIn 1s ease-in-out, textBlue 2s ease-in-out;
+        animation: casualFadeIn 1s ease-in-out, textBlue 2s ease-in-out;
         animation-fill-mode: forwards;
       }
     }
@@ -54,18 +63,69 @@ h2 {
   font-style: normal;
   color: white;
   text-align: center;
-
-  span {
-    &.blue {
-      color: var(--secondary-blue);
-    }
-  }
 }
 
 h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
 
-  animation: textFadeIn 4s ease-in-out;
+  animation: casualFadeIn 4s ease-in-out;
   color: white;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4em;
+  color: white;
+  text-align: center;
+
+  margin-top: 12px;
+}
+
+span {
+  &.red {
+    color: var(--primary-red);
+  }
+  &.blue {
+    color: var(--secondary-blue);
+  }
+  &.purple {
+    color: var(--primary-purple);
+  }
+  &.gray {
+    color: #9b9b9b;
+  }
+  &.dark-blue {
+    color: var(--tertiary-blue);
+  }
+}
+
+p {
+  &.center {
+    text-align: center;
+  }
+}
+
+.default-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+
+  &:hover {
+    background-color: #777;
+  }
+
+  &:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+  }
+}
+
+.hidden {
+  display: none;
 }

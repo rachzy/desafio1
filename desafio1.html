@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/carrousel.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/murasaki.css" />
     <title>Desafio 1 - ASCII</title>
   </head>
   <body>
     <div class="initial-container start">
-      <button class="the-button">Me clique :)</button>
+      <button id="muryokusho-trigger" class="the-button">Me clique :)</button>
       <div id="epilepsy-container">
         <input type="checkbox" id="epilepsy" name="epilepsy" />
         <label for="epilepsy">Sou epiléptico</label>
@@ -22,6 +23,10 @@
     <div class="muryokusho">
       <img class="splash" src="./assets/images/splash.png" alt="splash" />
     </div>
+    <video class="muryokusho-video">
+      <source src="./assets/videos/muryokusho.mp4" type="video/mp4" />
+    </video>
+    <div class="flash"></div>
     <main class="main-container">
       <video class="background-video" muted autoplay loop>
         <source src="./assets/videos/background-video.mp4" type="video/mp4" />
@@ -40,7 +45,7 @@
             id="carrousel-item"
             src="./assets/images/gojo-1.webp"
             alt="Satoru Gojo"
-            width="300px"
+            width="250px"
           />
           <img
             id="carrousel-item"
@@ -93,8 +98,203 @@
         </div>
       </div>
     </div>
+    <div class="mugen-container content">
+      <img
+        id="fake-cursor"
+        alt="cursor"
+        src="./assets/images/cursor.png"
+        width="14px"
+      />
+      <h2>Habilidades: <span class="gray">Mugen (Infinito)</span></h2>
+      <div class="about-content">
+        <div class="description-container">
+          <p>
+            O <b>Mugen</b> de Gojo funciona manipulando o espaço ao seu redor,
+            criando uma barreira infinita que impede qualquer coisa de tocá-lo.
+          </p>
+          <p>
+            O segredo por trás disso está na ideia matemática de que entre dois
+            pontos, como 0 e 1, existem <b>infinitos</b> números fracionários
+            (0.1, 0.01, 0.001). Da mesma forma, quando algo tenta atingi-lo, a
+            distância que precisa percorrer é constantemente dividida, criando
+            um efeito de desaceleração infinita.
+          </p>
+          <p>
+            Assim,
+            <b>qualquer ataque ou toque nunca realmente o alcança</b>, pois está
+            sempre se aproximando, mas nunca chegando ao destino final.
+          </p>
+          <p class="center">
+            <b><span class="blue">Tudo que se aproxima, lento ficará!</span></b>
+          </p>
+          <div class="mugen-challenge">
+            <h4>Pra entender melhor: Passe o mouse por cima dele</h4>
+            <p class="center">
+              <i><span class="center">PS: Ele está usando o Mugen</span></i>
+            </p>
+          </div>
+        </div>
+        <div class="image-container">
+          <img
+            class="mugen-gojo"
+            src="./assets/images/gojo-funny.png"
+            alt="Satoru Gojo"
+            width="584px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="about-container content">
+      <h2>Habilidades: <span class="blue">Rikugan (Seis olhos)</span></h2>
+      <div class="about-content">
+        <div class="image-container">
+          <img
+            src="./assets/images/six-eyes-1.gif"
+            alt="Six eyes"
+            width="650px"
+          />
+          <img
+            src="./assets/images/six-eyes-2.gif"
+            alt="Six eyes"
+            width="650px"
+          />
+        </div>
+        <div class="description-container">
+          <p>
+            O <b>Rikugan</b> de Gojo, ou <b>Seis Olhos</b>, é uma habilidade
+            extremamente rara, que lhe concede uma percepção absoluta da energia
+            amaldiçoada e do espaço ao seu redor. Com essa técnica, ele pode
+            enxergar a energia amaldiçoada em detalhes minuciosos, detectar
+            fluxos de poder com precisão absoluta e até perceber movimentos no
+            menor intervalo de tempo possível.
+          </p>
+          <p>
+            Além disso, o Rikugan aumenta drasticamente sua capacidadde de
+            controle de energia almadiçoada, permitindo que ele controle o Mugen
+            sem praticamente nenhum gasto de energia, tornando-o um oponente
+            praticamente invencível em batalha.
+          </p>
+          <p>
+            Contudo, os Seis Olhos causam fadiga aos usuários quando utilizados
+            por longos períodos de tempo, e por isso, é importante que
+            mantenham-se protegidos quando não estiverem em uso,
+            <b>e é por esse motivo que Gojo usa uma venda em seus olhos</b>.
+          </p>
+          <p>
+            Apesar disso, o Rikugan permite que ele consiga sentir a energia ao
+            seu redor até mesmo de olhos fechados, e, como até mesmo objetos
+            inanimados possuem alguma energia, Satoru Gojo consegue perceber o
+            espaço em que se encontra mesmo se estiver completamente vendado.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="murasaki-container content" id="murasaki-container">
+      <h2>
+        Habilidades: <span class="purple">Kyoshiki Murasaki (Vazio Roxo)</span>
+      </h2>
+      <div class="description-container">
+        <p id="anchor">
+          O <b>Kyoshiki Murasaki (Vazio Roxo)</b> é uma das técnicas mais
+          destrutivas de Gojo, sendo uma combinação avançada de suas técnicas
+          <b><span class="blue">Azul (Ao) </span></b> e
+          <b><span class="red">Vermelho (Aka) </span></b> . Para entender o
+          Vazio Roxo, primeiro é preciso entender as duas forças que o compõem:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <b><span class="blue">Azul</span></b
+              >: amplifica a atração, puxando tudo ao seu redor como um vórtice
+            </p>
+          </li>
+          <li>
+            <p>
+              <b><span class="red">Vermelho</span></b
+              >: faz o oposto, criando uma força repulsiva devastadora
+            </p>
+          </li>
+        </ul>
+        <p>
+          Quando Gojo combina essas duas forças opostas, ele gera o Murasaki,
+          que é basicamente um feixe de energia imparável que apaga tudo em seu
+          caminho. Diferente do Azul, que apenasatrai, ou do Vermelho, que
+          apenas repele, o Roxo funciona destruindo completamente a matéria que
+          toca, desintegrando qualquer coisa sem deixar vestígios. É um ataque
+          extremamente veloz e praticamente impossível de escapar, tornando-se
+          uma de suas técnicas mais letais.
+        </p>
+        <p class="center">
+          <b>Não entendeu? Então, veja com seus próprios olhos:</b>
+        </p>
+      </div>
+      <div class="murasaki-simulator">
+        <div id="container">
+          <div id="red" class="circle"></div>
+          <div id="blue" class="circle"></div>
+          <p id="text" class="visible">赫 (Vermelho)</p>
+          <p id="text" class="visible blue">蒼 (Azul)</p>
+          <p id="japanese-text"></p>
+        </div>
+
+        <div id="controls">
+          <button class="default-button" id="startButton">Iniciar</button>
+          <button class="default-button" id="releaseButton">SOLTAR!</button>
+        </div>
+      </div>
+    </div>
+    <div class="about-container content">
+      <h2>
+        Habilidades: <span class="dark-blue">Muryōkūsho (Vazio Infinito)</span>
+      </h2>
+      <div class="about-content">
+        <div class="description-container">
+          <p>
+            O <b>Muryōkūsho (Vazio Infinito)</b> é a Expansão de Domínio de
+            Gojo, uma técnica que leva seu controle do espaço e do Mugen ao
+            extremo. Quando ativada, ela cria um ambiente onde o inimigo é
+            bombardeado com uma quantidade infinita de informações, paralisando
+            sua mente completamente.
+          </p>
+          <p>
+            O conceito por trás disso é que o alvo recebe uma sobrecarga de
+            dados de forma contínua, tornando impossível para ele processar
+            qualquer ação. É como se uma pessoa tentasse pensar ou se mover, mas
+            estivesse presa em um fluxo interminável de estímulos, sem conseguir
+            concluir nada. Enquanto está dentro do domínio, a vítima percebe
+            tudo, mas não consegue fazer nada, ficando vulnerável ao ataque de
+            Gojo.
+          </p>
+          <p>
+            Diferentemente de outras expansões de domínio que duram apenas
+            alguns segundos, Satoru pode mantê-la ativa por muito mais tempo,
+            garantindo sua vitória contra praticamente qualquer inimigo.
+          </p>
+          <button
+            class="default-button muryokusho-secondary"
+            id="muryokusho-trigger"
+          >
+            Expandir
+          </button>
+        </div>
+        <div class="image-container">
+          <img
+            src="./assets/images/muryokusho-1.gif"
+            alt="Six eyes"
+            width="650px"
+          />
+          <img
+            src="./assets/images/muryokusho-2.gif"
+            alt="Six eyes"
+            width="650px"
+          />
+        </div>
+      </div>
+    </div>
   </body>
   <script src="./scripts/main.js"></script>
   <script src="./scripts/scroll-fade.js"></script>
   <script src="./scripts/carrousel.js"></script>
+  <script src="./scripts/mugen.js"></script>
+  <script src="./scripts/murasaki.js"></script>
 </html>
