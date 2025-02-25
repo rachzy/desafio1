@@ -128,3 +128,5 @@ muryokushoTriggers.forEach((trigger) => {
     }, 6510);
   });
 });
+
+displayContent(0);

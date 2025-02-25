@@ -21,13 +21,18 @@
 
 .circle {
   position: absolute;
+
+  width: 100px;
+  height: 100px;
+  top: 20px;
+
   border-radius: 50%;
   opacity: 0;
   transition: margin-top 1.5s, transform 4.5s ease-in-out, box-shadow 1.5s,
     opacity 0.4s;
 
   &.floating {
-    margin-top: -400px;
+    margin-top: -200px;
   }
 
   &.visible {
@@ -37,11 +42,9 @@
 
 #red {
   background-color: rgba(255, 0, 0, 0.7);
-  width: 100px;
-  height: 100px;
-  top: 200px;
-  left: 0;
   box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+
+  left: 0;
 
   animation: glow 1.5s infinite alternate;
 
@@ -67,9 +70,6 @@
 
 #blue {
   background-color: rgba(0, 0, 255, 0.7);
-  width: 100px;
-  height: 100px;
-  top: 200px;
   right: 0;
   box-shadow: 0 0 40px rgba(0, 0, 255, 0.8);
 
@@ -114,8 +114,10 @@
     }
   }
 
+  margin-left: -24px;
   &.blue {
-    right: 10px;
+    right: 12px;
+    margin-left: 0;
   }
 }
 

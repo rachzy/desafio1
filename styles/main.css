@@ -211,8 +211,6 @@ body {
       flex: 1;
     }
 
-    padding-inline: 24px;
-
     i {
       color: rgb(141, 141, 141);
       font-size: 0.9em;
@@ -251,6 +249,10 @@ body {
   }
 
   .mugen-challenge {
+    display: none;
+  }
+
+  #fake-cursor {
     display: none;
   }
 
