@@ -306,13 +306,13 @@ body {
 }
 
 footer {
+  flex-direction: column;
+
   justify-content: center;
   align-items: center;
 
   padding: 48px 12px;
   background: black;
-
-  margin-top: 48px;
 
   p {
     color: white;
