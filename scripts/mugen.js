@@ -1,4 +1,4 @@
-const mugenContainer = document.querySelector(".mugen-container");
+const mugenContainer = document.querySelector(".mugen");
 const mugenGojo = document.querySelector(".mugen-gojo");
 const fakeCursor = document.querySelector("#fake-cursor");
 
@@ -18,11 +18,19 @@ function setSpeedInterval() {
   }, 10);
 }
 
+mugenContainer.addEventListener("mouseenter", () => {
+  fakeCursor.classList.remove("hidden");
+});
+
+mugenContainer.addEventListener("mouseleave", () => {
+  fakeCursor.classList.add("hidden");
+});
+
 mugenContainer.addEventListener("mousemove", (event) => {
   const { clientX, clientY } = event;
   if (!isInside) {
     fakeCursor.style.left = `${clientX}px`;
-    fakeCursor.style.top = `${clientY}px`;
+    fakeCursor.style.top = `${clientY - 130}px`;
     return;
   }
 
@@ -30,7 +38,7 @@ mugenContainer.addEventListener("mousemove", (event) => {
   const currentY = parseInt(fakeCursor.style.top);
 
   const mustAddX = (clientX - currentX) * speed;
-  const mustAddY = (clientY - currentY) * speed;
+  const mustAddY = (clientY - 130 - currentY) * speed;
 
   fakeCursor.style.left = `${currentX + mustAddX}px`;
   fakeCursor.style.top = `${currentY + mustAddY}px`;
